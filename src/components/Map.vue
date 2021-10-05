@@ -103,8 +103,8 @@
       convertLatLng: (vehicle) => latLng(vehicle.location.lat, vehicle.location.lng),
     },
     mounted() {
-      apiServiceInstance.fetchVehicles().then((data) => { this.vehicles = data.vehicles })
-      // this.vehicles = apiServiceInstance.fetchVehicles()
+      // apiServiceInstance.fetchVehicles().then((data) => { this.vehicles = data.vehicles })
+      this.vehicles = apiServiceInstance.fetchVehicles()
       this.$refs.map.mapObject.fitBounds(this.vehicles.map(v => { return [v.location.lat, v.location.lng] }))
     }
   }
