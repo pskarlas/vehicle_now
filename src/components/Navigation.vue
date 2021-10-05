@@ -12,5 +12,4 @@
     </nav>
   </header>
 </template>
-<script>
-</script>
+<script></script>

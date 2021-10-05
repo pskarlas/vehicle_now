@@ -6,7 +6,6 @@
       <v-marker-cluster :options="clusterOptions" @clusterclick="clusterClick($event)">
         <v-marker v-for="v in vehicles" :key="v.id" :lat-lng="convertLatLng(v)" :icon="defaultIcon" >
           <v-popup :keep-in-view=true>
-              <!-- This example requires Tailwind CSS v2.0+ -->
             <div class="">
               <div class="py-2">
                 <h3 class="text-base leading-6 font-medium text-gray-900">
@@ -34,21 +33,21 @@
                   </div>
 
                   <div class="bg-white px-2 py-2 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-2">
-                      <dt class="text-xs font-medium text-gray-500">
-                        RFID Access
-                      </dt>
-                      <dd class="mt-1 text-xs text-gray-900 sm:mt-0 sm:col-span-1">
-                         {{v.allow_rfid_card_access? 'yes' : 'not available'}}
-                      </dd>
+                    <dt class="text-xs font-medium text-gray-500">
+                      RFID Access
+                    </dt>
+                    <dd class="mt-1 text-xs text-gray-900 sm:mt-0 sm:col-span-1">
+                       {{v.allow_rfid_card_access? 'yes' : 'not available'}}
+                    </dd>
                   </div>
                   <div class="bg-gray-50  px-2 py-2 sm:grid sm:grid-cols-2 sm:gap-2 sm:px-2">
-                      <dt class="text-xs font-medium text-gray-500">
-                        Street
-                      </dt>
-                      <dd class="block text-xs text-gray-900 sm:mt-0 sm:col-span-2">
-                         {{v.location.street}}, <br>
-                         {{v.location.city}} {{v.location.postcode}}
-                      </dd>
+                    <dt class="text-xs font-medium text-gray-500">
+                      Street
+                    </dt>
+                    <dd class="block text-xs text-gray-900 sm:mt-0 sm:col-span-2">
+                       {{v.location.street}}, <br>
+                       {{v.location.city}} {{v.location.postcode}}
+                    </dd>
                   </div>
                   <div class="w-full py-2 sm:grid sm:grid-cols-2 sm:gap-0">
                     <button type="button" class="col-span-2 inline-flex justify-center items-center px-2.5 py-1.5 border border-transparent text-sm font-semibold rounded shadow-sm text-white bg-rose-600 hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500 transition ease-in-out duration-300">
@@ -61,11 +60,7 @@
           </v-popup>
         </v-marker>
       </v-marker-cluster>
-
     </v-map>
-    <div class="text-right mt-4 mr-4">
-        <a href="javascript:;" class="text-xs text-gray-700 underline hover:no-underline">reset map position</a>
-    </div>
   </div>
 </template>
 
