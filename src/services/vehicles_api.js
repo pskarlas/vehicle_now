@@ -10,6 +10,7 @@ export class apiService {
     // const url = `${API_URL}/vehicles`
     // return axios.get(url, {}).then(response => response.data)
 
+
     // The prerelease server does not accept CORS requests,
     // I am therefore mocking up a response
     let vehicles =  [
